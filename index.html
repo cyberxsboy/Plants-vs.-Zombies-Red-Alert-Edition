@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色警戒风格植物大战僵尸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="resource-display">
+            <p>金钱: <span id="money">0</span></p>
+            <p>电力: <span id="power">0</span></p>
+            <p>阳光: <span id="sun">0</span></p>
+        </div>
+        <div id="game-message" style="display: none;">
+            <h2></h2>
+            <button onclick="restartGame()">重新开始</button>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="building-panel">
+            <h3>建造</h3>
+            <div id="entity-list">
+                <!-- 可建造的实体将在这里动态加载 -->
+            </div>
+        </div>
+        <!-- 游戏画布或其他元素将在这里渲染 -->
+    </div>
+    <script src="frontend/dist/bundle.js"></script>
+    <audio id="background-music" src="./audio/red_alert_theme.mp3" loop autoplay></audio>
+</body>
+</html>

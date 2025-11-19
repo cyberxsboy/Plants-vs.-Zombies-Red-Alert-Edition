@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: #eee;
+    font-family: 'Arial', sans-serif;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 临时背景，可以替换为游戏背景 */
+    background-image: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Red+Alert+PvZ');
+    background-size: cover;
+    background-position: center;
+}
+
+#game-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 200;
+}
+
+#game-message h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #FFD700;
+}
+
+#game-message button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #A00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#game-message button:hover {
+    background-color: #C00;
+}
+
+#game-canvas {
+    border: 2px solid #ccc;
+    background-color: #222;
+}
+
+#building-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+    width: 200px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#building-panel h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.entity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.entity-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.entity-item.selected {
+    border-color: #FFD700;
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+.entity-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #777;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.entity-details p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.entity-details .cost {
+    color: #FFD700; /* 金色 */
+}
+
+#resource-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 100;
+}
+
+#resource-display p {
+    margin: 5px 0;
+}
