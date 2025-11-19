@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && webpack --mode production"
+    "build": "tsc -p ./frontend/tsconfig.json && webpack --mode production"
   },
   "keywords": [],
   "author": "",
